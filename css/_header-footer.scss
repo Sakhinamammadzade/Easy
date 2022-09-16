@@ -1,0 +1,334 @@
+@import"_Variable.scss";
+
+#header{
+    background-color: var(--HeaderBgColor);
+  
+   .left-side{
+      .logo{
+        a{
+           color: var(--textColor);
+           text-decoration: none;
+           font-size: 26px;
+           font-weight: 700;
+           line-height: 43px;
+           font-family: 'Montserrat', sans-serif;
+
+
+        }
+      }
+      .navMenu{
+        margin-left: 50px;
+        display: block;
+        z-index: 10;
+        ul{
+          
+           .Dropdown{
+                position: relative;
+                i{
+                    margin-left: 10px;
+                    font-size: 12px;
+                 }
+               &:hover{
+                  ul{
+                    transform: translateY(-10px);
+                    opacity: 1;
+                    visibility: visible;
+                  
+                  }
+               }
+                ul{
+                    margin-top: 20px !important;
+                    position: absolute;
+                    top: 100%;
+                    width: 210px;
+                    padding: 18px 18px;
+                    height: 170px;
+                    background-color: #fff;
+                    transition: .5s ease;
+                    transform: translateY(0);
+                    opacity: 0;
+                    visibility: hidden;
+                  
+                    .MenuTwo{
+                        transition: .2s all ease;
+                        position: relative;
+                        .angle-right{
+                            margin-left: 50px;
+                        }
+                        &:hover{
+                            .subMenu{
+                                opacity: 1;
+                                visibility: visible; 
+                                transform: translateY(-40px);
+                            }
+                        }
+                        .subMenu{
+                            position: absolute;
+                            top: 50%;
+                            left: 100%;
+                            margin-left: 18px !important;
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(0);
+
+                        }
+                    }
+                    
+
+                 
+                    li{
+
+                         a{
+                            color: #000;
+                            line-height: 30px;
+                            font-size: 16px;
+                            transition: .3 all ease-in-out;
+                            font-family: sans-serif;
+                            &:hover{
+                               
+                                 color:var(--linkHoverColor);
+                                }
+                         }
+                    }
+                    
+                }
+            }
+             
+            li{
+                 margin-top: 10px;
+                 &:nth-of-type(1){
+                    
+                     a{
+                         color: red;
+                     }
+                    
+                 }
+
+                a{
+                    text-decoration: none;
+                    font-size: 15px;
+                    color: var(--textColor);
+                     cursor: pointer;
+                    margin: 14px;
+                    transition: .3s ease-in-out;
+                    font-family: "Montserrat";
+                    font-weight: 300;
+                  
+                    &:hover{
+                        color: var(--linkHoverColor);
+                    }
+                  
+                   
+
+                 }
+            }
+        }
+      }
+   }
+   .right-side{
+    
+      .button{
+        a{
+            text-decoration: none;
+            color: var(--textColor);
+            padding: 8px 25px;
+            border: 2px solid var(--btnBorder);
+            border-radius: 30px;
+            font-size: 18px;
+            transition: .3s all ease;
+            user-select: none;
+            &:hover{
+                background-color: var(--buttonHover);
+            }
+
+        }
+      }
+      #barIco{
+          
+            color: #fff;
+            font-size: 30px;
+            margin-left: 10px;
+            display: none;
+            &:hover{
+                font-size: 32px;
+            }
+          
+      }
+      .responsive-menu{
+        position: absolute;
+        top: 0%;
+        right: 50%;
+        width: 350px;
+        height: 550px;
+        background-color: #fff;
+        padding: 35px 70px;
+        opacity: 0;
+        visibility: hidden;
+        border: 1px solid;
+       .responseMenu{
+         
+        li{
+            margin-top: 10px;
+            .arrow{
+                margin-left: 40px;
+            }
+            #Dropdown{
+                background-color: rgb(158, 46, 46);
+                width: 200px;
+                height: 120px;
+                border: 1px solid;
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+               &.active-ul{
+                 opacity: 1;
+                 visibility: visible;
+                 height: 100%;
+               }
+
+            }
+
+            a{
+                color: #000;
+                font-size: 17px;
+                text-decoration: none;
+                &:hover{
+                    color: var(--linkHoverColor);
+                }
+
+
+
+            }
+          }
+
+           
+       
+       }
+        .close{
+            display: flex;
+            justify-content: flex-end;
+            
+          a{
+            text-decoration: none;
+            transition: .3s ease-in;
+            span{
+                color: #000;
+                font-size: 35px;
+            font-weight: 400;
+            } 
+          }
+        }
+         &.active-menu{
+            opacity: 1;
+            visibility: visible;
+            right: 0%;
+            z-index: 1;
+        }
+      }
+   
+      
+   }
+
+}
+#footer{
+    margin-top: 100px;
+    background-color:var(--footerBg);
+    padding: 30px;
+    height: 80vh;
+    
+.footer-about{
+    h6{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 30px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #000839;
+    }
+    .connect{
+        margin-top: 30px;
+         h6{
+            font-weight: 700;
+            line-height: 19px;
+            font-size: 18px;
+            color: #000839;
+         }
+      
+         .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            display: inline-block;
+            position: relative;
+            color: black;
+          
+            &:not(:first-child){
+                margin-left: 8px !important;
+             }
+            &:hover{
+                color:rgb(255, 99, 99);
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: .3s ease-in-out;
+            }
+           }
+          
+    }
+   
+}
+.list{
+    .main-li{
+        a{
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 40px;
+            font-family: 'Hind Siliguri', sans-serif;
+            transition: .3s ease-in-out;
+            color: rgba(0, 0, 0, 0.674);
+            &:hover{
+                color:var(--footerlinkhover);
+            }
+        }
+    }
+}
+.navigation{
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 0%;
+    margin-bottom: 30px;
+}
+hr{
+    margin-top: 70px;
+    color: rgb(194, 188, 188);
+}
+.footer-end{
+    margin-top: 40px;
+    p{
+        font-size: 17px;
+        i{
+            color: red;
+        }
+        span{
+            transition: .3s ease-in-out;
+            &:hover{
+                color:var(--footerlinkhover);
+                
+                
+            }
+        }
+    }
+}
+
+}
+
+
+@import"_header-footer-responsive.scss"

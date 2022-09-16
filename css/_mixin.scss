@@ -1,0 +1,16 @@
+@mixin GetStarted{
+    background: #ff6363;
+                border-color: #ff6363;
+                padding: 12px 30px;
+                margin: 30px 20px;
+                display: inline-block;
+                text-decoration: none;
+                color: #fff;
+                border-radius: 25px;
+                user-select: none;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    filter: brightness(1.4);
+                }
+}
